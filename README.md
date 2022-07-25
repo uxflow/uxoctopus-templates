@@ -1,1 +1,3 @@
-# uxoctopus-templates
+# Uxoctopus Templates
+
+Templates generated for octopus.
