@@ -1,14 +1,18 @@
+const { resolve } = require('path');
+
 module.exports = {
   env: {
-    browser: true,
+    node: true,
     es2021: true,
+    browser: true,
   },
-  root: true,
   extends: [
     'airbnb',
     'airbnb/hooks',
     'airbnb-typescript',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
+    'plugin:@next/next/recommended',
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
   ],
@@ -23,6 +27,7 @@ module.exports = {
     },
     sourceType: 'module',
     ecmaVersion: 'latest',
+    tsconfigRootDir: __dirname,
   },
   plugins: [
     'react',
@@ -40,38 +45,10 @@ module.exports = {
     },
   },
   rules: {
-    'linebreak-style': 'off',
-    'react/prop-types': 0,
     'no-bitwise': ['error', { allow: ['~'] }],
-    'import/no-cycle': 'off',
-    'react/jsx-indent': [2, 2, {
-      checkAttributes: true,
-      indentLogicalExpressions: true,
-    }],
-    'guard-for-in': 'off',
-    'import/no-duplicates': 'off',
-    'react/react-in-jsx-scope': 'off',
-    'jsx-a11y/media-has-caption': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx', '.tsx'] }],
-    'import/no-extraneous-dependencies': 0,
-    'react/function-component-definition': [2, {
-      namedComponents: 'arrow-function',
-    }],
-    '@typescript-eslint/no-explicit-any': 'off',
-    'no-restricted-syntax': ['error', 'WithStatement', "BinaryExpression[operator='in']"],
-    camelcase: 0,
-    'jsx-a11y/anchor-is-valid': ['error', {
-      components: ['Link'],
-      specialLink: ['hrefLeft', 'hrefRight'],
-      aspects: ['invalidHref', 'preferButton'],
-    }],
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'space-before-function-paren': ['error', {
-      anonymous: 'always',
-      named: 'always',
-      asyncArrow: 'always',
-    }],
+    'import/named': 'off',
+    'import/export': 0,
+    'react/no-danger': 'off',
     'space-unary-ops': [2, {
       words: true,
       nonwords: false,
@@ -80,34 +57,38 @@ module.exports = {
         '!!': true,
       },
     }],
+    'react/prop-types': 0,
+    'import/no-unresolved': 'off',
+    'class-methods-use-this': 'off',
+    'jsx-a11y/anchor-is-valid': 'off',
     'react/jsx-props-no-spreading': 'off',
-    '@typescript-eslint/naming-convention': ['error', {
-      format: ['camelCase', 'snake_case', 'PascalCase'],
-      selector: 'variable',
-    }],
-    'space-before-function-paren': ['error', {
-      named: 'always',
-      anonymous: 'always',
-      asyncArrow: 'always'
-    }],
-    '@typescript-eslint/space-before-function-paren': 'off',
     'import-helpers/order-imports': ['warn', {
       newlinesBetween: 'always',
       groups: [
         '/^react/',
         'module',
         '/^@shared/',
+        '/^@core/',
+        '/^@modules/',
+        '/^@configs/',
+        '/^~/',
         ['parent', 'sibling', 'index'],
       ],
       alphabetize: { order: 'asc', ignoreCase: true },
     },
     ],
-    'import/extensions': [
+    'import/prefer-default-export': 'off',
+    'import/no-extraneous-dependencies': 0,
+    '@next/next/no-html-link-for-pages': ['error', resolve(__dirname, 'src/pages')],
+    '@typescript-eslint/no-explicit-any': 'off',
+    'react/function-component-definition': [2, {
+      namedComponents: 'arrow-function',
+    }],
+    '@typescript-eslint/naming-convention': [
       'error',
-      'ignorePackages',
       {
-        ts: 'never',
-        tsx: 'never',
+        format: ['camelCase', 'snake_case', 'PascalCase', 'UPPER_CASE'],
+        selector: 'variable',
       },
     ],
   },

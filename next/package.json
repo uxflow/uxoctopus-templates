@@ -1,6 +1,5 @@
 {
   "name": "uxoctopus",
-  "main": "index.js",
   "husky": {
     "hooks": {
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
@@ -30,8 +29,7 @@
     "@uxoctopus/icons": "^0.0.3",
     "@uxoctopus/styles": "^0.3.0",
     "framer-motion": "^6.5.1",
-    "next": "^12.2.3",
-    "next-images": "^1.8.4",
+    "next": "^12.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "yup": "^0.32.11"
@@ -39,6 +37,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
+    "@next/eslint-plugin-next": "^12.3.1",
     "@types/node": "^18.6.1",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",

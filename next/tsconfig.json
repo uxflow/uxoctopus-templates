@@ -2,6 +2,9 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "*.config.js",
+    ".eslintrc.js",
+    "*.config.mjs",
     "next-env.d.ts"
   ],
   "exclude": [
@@ -23,11 +26,12 @@
       ]
     },
     "noEmit": true,
-    "module": "esnext",
-    "target": "es5",
+    "module": "ESNext",
+    "target": "ESNext",
     "strict": false,
     "baseUrl": ".",
-    "allowJs": false,
+    "allowJs": true,
+    "checkJs": false,
     "sourceMap": true,
     "incremental": true,
     "declaration": true,
