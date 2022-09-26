@@ -25,14 +25,14 @@ export default defineConfig({
       output: {
         entryFileNames: '[name].js',
         chunkFileNames: '[name].js',
-        assetFileNames: '[name].[ext]'
-      }
-    }
+        assetFileNames: '[name].[ext]',
+      },
+    },
   },
 
   resolve: {
     alias: {
-      '~': resolve(__dirname, './node_modules')
-    }
-  }
+      '~': resolve(__dirname, './node_modules'),
+    },
+  },
 });

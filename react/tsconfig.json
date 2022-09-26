@@ -2,6 +2,8 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "*.config.js",
+    ".eslintrc.js",
     "vite.config.ts"
   ],
   "exclude": [
@@ -30,7 +32,8 @@
     "target": "ESNext",
     "strict": false,
     "baseUrl": ".",
-    "allowJs": false,
+    "allowJs": true,
+    "checkJs": false,
     "sourceMap": true,
     "declaration": true,
     "skipLibCheck": true,

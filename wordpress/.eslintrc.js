@@ -16,5 +16,6 @@ module.exports = {
   rules: {
     'import/named': 'off',
     'no-param-reassign': 'off',
+    'import/no-extraneous-dependencies': ['error', { peerDependencies: true }],
   },
 };

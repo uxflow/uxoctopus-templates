@@ -12,4 +12,4 @@ window.hamb = hamb;
 window.onInputBlur = onInputBlur;
 window.onInputFocus = onInputFocus;
 
-window.addEventListener('scroll', () => scroll('#head', '.pointer'))
+window.addEventListener('scroll', () => scroll('#head', '.pointer'));
