@@ -1,4 +1,0 @@
-dist
-*.config.js
-.eslintrc.js
-node_modules
