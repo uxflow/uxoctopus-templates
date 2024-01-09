@@ -3,7 +3,7 @@
    * Register menu.
    */
   require_once get_template_directory() . '/functions/class-wp-bootstrap-navwalker.php';
-
+ 
   register_nav_menus( array(
     'main' => __('Primary', 'uxoctopus'),
   ));
